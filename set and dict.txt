@@ -1,0 +1,339 @@
+Microsoft Windows [Version 10.0.22621.819]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\acer>python
+Python 3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = {}
+>>> type(a_
+... type()
+  File "<stdin>", line 1
+    type(a_
+         ^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> type(a)
+<class 'dict'>
+>>> a = set()
+>>> type(a)
+<class 'set'>
+>>> fruits = {'apple', 'banana', 'grapes', 'apple'}
+>>> fruits
+{'grapes', 'banana', 'apple'}
+>>> dir(set)
+['__and__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__iand__', '__init__', '__init_subclass__', '__ior__', '__isub__', '__iter__', '__ixor__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__rand__', '__reduce__', '__reduce_ex__', '__repr__', '__ror__', '__rsub__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__xor__', 'add', 'clear', 'copy', 'difference', 'difference_update', 'discard', 'intersection', 'intersection_update', 'isdisjoint', 'issubset', 'issuperset', 'pop', 'remove', 'symmetric_difference', 'symmetric_difference_update', 'union', 'update']
+>>> a= {1,2,3,4,5}
+>>> b={4,5,6,7,8}
+>>> a.add{a}
+  File "<stdin>", line 1
+    a.add{a}
+         ^
+SyntaxError: invalid syntax
+>>> a.add(a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'set'
+>>> help(add)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'add' is not defined
+>>> b = {}
+>>> profile = {"name": "ram", "address": "ktm", "contact": "9823"}
+>>> profile = {"name": "ram", "address": "ktm", "contact": "9823"}
+>>> profile
+{'name': 'ram', 'address': 'ktm', 'contact': '9823'}
+>>> dir(dict)
+['__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__ior__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__ror__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+>>> profile.keys()
+dict_keys(['name', 'address', 'contact'])
+>>> profile.values()
+dict_values(['ram', 'ktm', '9823'])
+>>> epad
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'epad' is not defined
+>>> has("name")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'has' is not defined. Did you mean: 'hash'?
+>>> hash("name")
+-3532598237971828886
+>>> hash("name")
+-3532598237971828886
+>>> hash([1,2,3])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unhashable type: 'list'
+>>> dir(dict)
+['__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__ior__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__ror__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+>>> # get, setdefault
+>>> profile["name"]
+'ram'
+>>> profile["ram"]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 'ram'
+>>> profile.get('name")
+  File "<stdin>", line 1
+    profile.get('name")
+                ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> profile.get("name")
+'ram'
+>>> profile.get("nam")
+>>> proupdate={"bijay" : "hello"}
+>>> profile.update(proupdate)
+>>> profile
+{'name': 'ram', 'address': 'ktm', 'contact': '9823', 'bijay': 'hello'}
+>>> profile.get("name", "unknown")
+'ram'
+>>> profile.get("contact2", "unknown")
+'unknown'
+>>> up = {"bijay" : "hi"}
+>>> profile.update(up)
+>>> profile
+{'name': 'ram', 'address': 'ktm', 'contact': '9823', 'bijay': 'hi'}
+>>> profile["bijay"]=
+  File "<stdin>", line 1
+    profile["bijay"]=
+                     ^
+SyntaxError: invalid syntax
+>>> profile["bijay"]="hey"
+>>> profile
+{'name': 'ram', 'address': 'ktm', 'contact': '9823', 'bijay': 'hey'}
+>>> profile.setdefault("contact", "unknow")
+'9823'
+>>> profile.setdefault("contact2", "unknown")
+'unknown'
+>>> profile
+{'name': 'ram', 'address': 'ktm', 'contact': '9823', 'bijay': 'hey', 'contact2': 'unknown'}
+>>> dir(dict)
+['__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__ior__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__ror__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+>>> profile.setdefault("college")
+>>> profile
+{'name': 'ram', 'address': 'ktm', 'contact': '9823', 'bijay': 'hey', 'contact2': 'unknown', 'college': None}
+>>> profile["college"] = "Morgan College"
+>>> profile
+{'name': 'ram', 'address': 'ktm', 'contact': '9823', 'bijay': 'hey', 'contact2': 'unknown', 'college': 'Morgan College'}>>> dir(dict)
+['__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__ior__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__ror__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+>>> profile.items()
+dict_items([('name', 'ram'), ('address', 'ktm'), ('contact', '9823'), ('bijay', 'hey'), ('contact2', 'unknown'), ('college', 'Morgan College')])
+>>> profile
+{'name': 'ram', 'address': 'ktm', 'contact': '9823', 'bijay': 'hey', 'contact2': 'unknown', 'college': 'Morgan College'}>>> profile.pop("name")
+'ram'
+>>> profile
+{'address': 'ktm', 'contact': '9823', 'bijay': 'hey', 'contact2': 'unknown', 'college': 'Morgan College'}
+>>> profile.popitem("ktm")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: dict.popitem() takes no arguments (1 given)
+>>> dict.popitem()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unbound method dict.popitem() needs an argument
+>>> profile.popitem()
+('college', 'Morgan College')
+>>> profile
+{'address': 'ktm', 'contact': '9823', 'bijay': 'hey', 'contact2': 'unknown'}
+>>> profile.fromkeys()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: fromkeys expected at least 1 argument, got 0
+>>> profile.fromkeys("hey")
+{'h': None, 'e': None, 'y': None}
+>>> profile
+{'address': 'ktm', 'contact': '9823', 'bijay': 'hey', 'contact2': 'unknown'}
+>>> profile.fromkeys("address")
+{'a': None, 'd': None, 'r': None, 'e': None, 's': None}
+>>> # fromkeys
+>>> a = ["username", "email", "first_name", "last_name"]
+>>> profile.fromkeys(a)
+{'username': None, 'email': None, 'first_name': None, 'last_name': None}
+>>> profile
+{'address': 'ktm', 'contact': '9823', 'bijay': 'hey', 'contact2': 'unknown'}
+>>> user_details = profile.fromkeys(a)
+>>> user_details
+{'username': None, 'email': None, 'first_name': None, 'last_name': None}
+>>> user_details = profile.fromkeys(a, "not known")
+>>> user_details
+{'username': 'not known', 'email': 'not known', 'first_name': 'not known', 'last_name': 'not known'}
+>>> user_details[
+...
+...
+... asdf
+... user_
+  File "<stdin>", line 4
+    asdf
+    ^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> user_details['username']="bjjinlaw"
+>>> user_details
+{'username': 'bjjinlaw', 'email': 'not known', 'first_name': 'not known', 'last_name': 'not known'}
+>>> up1={"email": "sdf@gmail.com", "first_name": "bijay", "last_name": "magar"}
+>>> user_details.update(up1)
+>>> user_details
+{'username': 'bjjinlaw', 'email': 'sdf@gmail.com', 'first_name': 'bijay', 'last_name': 'magar'}
+>>> # items, keys, values
+>>> profile.keys()
+dict_keys(['address', 'contact', 'bijay', 'contact2'])
+>>> profile.values()
+dict_values(['ktm', '9823', 'hey', 'unknown'])
+>>> profile(list(keys())
+...
+...
+... asdfv
+  File "<stdin>", line 1
+    profile(list(keys())
+            ^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> profile.list(keys())
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'dict' object has no attribute 'list'
+>>> profile.items()
+dict_items([('address', 'ktm'), ('contact', '9823'), ('bijay', 'hey'), ('contact2', 'unknown')])
+>>> list(profile.keys())
+['address', 'contact', 'bijay', 'contact2']
+>>> list(profile.values())
+['ktm', '9823', 'hey', 'unknown']
+>>> list(profile.items())
+[('address', 'ktm'), ('contact', '9823'), ('bijay', 'hey'), ('contact2', 'unknown')]
+>>> d = list(profile.keys())
+>>> d
+['address', 'contact', 'bijay', 'contact2']
+>>> for i in d:
+... print(i)
+  File "<stdin>", line 2
+    print(i)
+    ^
+IndentationError: expected an indented block after 'for' statement on line 1
+>>> for i in d:
+...     print(i)
+...
+address
+contact
+bijay
+contact2
+>>> for i in profile.keys():
+...     print(i)
+...
+address
+contact
+bijay
+contact2
+>>> for profile.values():
+  File "<stdin>", line 1
+    for profile.values():
+        ^^^^^^^^^^^^^^^^
+SyntaxError: cannot assign to function call
+>>> for i in profile.values():
+...     print(i)
+...
+ktm
+9823
+hey
+unknown
+>>> for i in profile.items():
+...     print(i)
+...
+('address', 'ktm')
+('contact', '9823')
+('bijay', 'hey')
+('contact2', 'unknown')
+>>> a, b = 20
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot unpack non-iterable int object
+>>> a
+['username', 'email', 'first_name', 'last_name']
+>>> b
+{}
+>>> x,y=10,20
+>>> x
+10
+>>> y
+20
+>>> x,y,z=10,20,30
+>>> x
+10
+>>> y
+20
+>>> z
+30
+>>> for key, val in profile.items()
+  File "<stdin>", line 1
+    for key, val in profile.items()
+                                   ^
+SyntaxError: expected ':'
+>>> for key, val in profile.items():
+...     print(f"key: {key}, value: {val}")
+...
+key: address, value: ktm
+key: contact, value: 9823
+key: bijay, value: hey
+key: contact2, value: unknown
+>>> for i in profile.items():
+...     print(*i)
+...
+address ktm
+contact 9823
+bijay hey
+contact2 unknown
+>>> for i, j in profile.items():
+...     print(i, j)
+...
+address ktm
+contact 9823
+bijay hey
+contact2 unknown
+>>> profile.pop("contact2")
+'unknown'
+>>> proifle
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'proifle' is not defined. Did you mean: 'profile'?
+>>> profile
+{'address': 'ktm', 'contact': '9823', 'bijay': 'hey'}
+>>> help(dict,popitem)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'popitem' is not defined
+>>> help(dict.prpitem)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: type object 'dict' has no attribute 'prpitem'. Did you mean: 'popitem'?
+>>> help(dict.popitem)
+Help on method_descriptor:
+
+popitem(self, /)
+    Remove and return a (key, value) pair as a 2-tuple.
+
+    Pairs are returned in LIFO (last-in, first-out) order.
+    Raises KeyError if the dict is empty.
+
+>>> profile.popitem()
+('bijay', 'hey')
+>>> profile
+{'address': 'ktm', 'contact': '9823'}
+>>> profile.update({"college": "abc college"})
+>>> profile
+{'address': 'ktm', 'contact': '9823', 'college': 'abc college'}
+>>> profile.update(contact2="92333")
+>>> profile
+{'address': 'ktm', 'contact': '9823', 'college': 'abc college', 'contact2': '92333'}
+>>> profile["verified'] = True
+  File "<stdin>", line 1
+    profile["verified'] = True
+            ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> profile["verified"] = True
+>>> profile
+{'address': 'ktm', 'contact': '9823', 'college': 'abc college', 'contact2': '92333', 'verified': True}
+>>> list(profile.keys())
+['address', 'contact', 'college', 'contact2', 'verified']
+>>> list(profile.values())
+['ktm', '9823', 'abc college', '92333', True]
+>>> list(profile.items())
+[('address', 'ktm'), ('contact', '9823'), ('college', 'abc college'), ('contact2', '92333'), ('verified', True)]
+>>> set(profile.keys())
+{'contact2', 'college', 'contact', 'address', 'verified'}
+>>>

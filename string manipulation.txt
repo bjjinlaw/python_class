@@ -1,0 +1,495 @@
+
+>>> a = "ram"
+>>> a.capitalize()
+'Ram'
+>>> a.title()
+'Ram'
+>>> a.upper()
+'RAM'
+>>> a=a.capitalize()
+>>> a
+'Ram'
+>>> # casefold, count, endswith, startswith, find, join, strip, split, partition, upper, lower
+>>> a = "ram@gmail.com"
+>>> b = input("enter email address")
+enter email address RAM@gmail.com
+>>> a
+'ram@gmail.com'
+>>> b
+' RAM@gmail.com'
+>>> b=b.lower(input("enter gmail address"))
+enter gmail addressRAM@gmail.com
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: str.lower() takes no arguments (1 given)
+>>> a==b
+False
+>>> a.casefold()==b.casefold()
+False
+>>> a.casefold()
+'ram@gmail.com'
+>>> b.casefold()
+' ram@gmail.com'
+>>> a
+'ram@gmail.com'
+>>> b
+' RAM@gmail.com'
+>>> a.casefold()
+'ram@gmail.com'
+>>> b.casefold()
+' ram@gmail.com'
+>>> a.casefold()==b.casefold()
+False
+>>> a.casefold()
+'ram@gmail.com'
+>>> b.casefold()
+' ram@gmail.com'
+>>> a="ram@gmail.com"
+>>> b=input("enter gmail id")
+enter gmail idRAM@gmail.com
+>>> a
+'ram@gmail.com'
+>>> b
+'RAM@gmail.com'
+>>> a==b
+False
+>>> a.casefold()==b.casefold()
+True
+>>> a.casefold()
+'ram@gmail.com'
+>>> b.casefold()
+'ram@gmail.com'
+>>> a
+'ram@gmail.com'
+>>> b
+'RAM@gmail.com'
+>>> b.lower()
+'ram@gmail.com'
+>>> a
+'ram@gmail.com'
+>>> b
+'RAM@gmail.com'
+>>> b=b.lower()
+>>> a
+'ram@gmail.com'
+>>> b
+'ram@gmail.com'
+>>> a = "papaya"
+>>> a.count("p")
+2
+>>> a.count("pa")
+2
+>>> a.count("pa")
+2
+>>> a.count("aya")
+1
+>>> a.count("apy")
+0
+>>> a = "python language")
+  File "<stdin>", line 1
+    a = "python language")
+                         ^
+SyntaxError: unmatched ')'
+>>>  a= ("python language")
+  File "<stdin>", line 1
+    a= ("python language")
+IndentationError: unexpected indent
+>>> a = "python language")
+  File "<stdin>", line 1
+    a = "python language")
+                         ^
+SyntaxError: unmatched ')'
+>>> a = "python language"
+>>> a.startswith("p")
+True
+>>> a.startswith("h")
+False
+>>> a.startswith("python")
+True
+>>> a.startswith("pthon")
+False
+>>> a
+'python language'
+>>> a.endswith("age")
+True
+>>> a.endswith("guage")
+True
+>>> a.endswith("pyh")
+False
+>>> if a.endswith("age"):
+... print("false")
+  File "<stdin>", line 2
+    print("false")
+    ^
+IndentationError: expected an indented block after 'if' statement on line 1
+>>> if a.endswith("age"):
+...     print("right")
+...
+right
+>>> a = " +97-23973928   "
+>>> a
+' +97-23973928   '
+>>> a.strip()
+'+97-23973928'
+>>> a=a.strip()
+>>> a
+'+97-23973928'
+>>>
+>>> a
+'+97-23973928'
+>>> a=a.replace("a","9")
+>>> a
+'+97-23973928'
+>>> b = "####$50"
+>>> b.strip("#")
+'$50'
+>>> b.strip("$")
+'####$50'
+>>> profile = "Ram-ram@gmail.com-ktm-9823390335-9742440384"
+>>> profile.split("-")
+['Ram', 'ram@gmail.com', 'ktm', '9823390335', '9742440384']
+>>> email = "ram@gmail.com"
+>>> email.split("@")
+['ram', 'gmail.com']
+>>> profile
+'Ram-ram@gmail.com-ktm-9823390335-9742440384'
+>>> profile.split("-", 3)
+['Ram', 'ram@gmail.com', 'ktm', '9823390335-9742440384']
+>>> help(profile.spilt())
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'spilt'. Did you mean: 'split'?
+>>> help(profile.split())
+Help on list object:
+
+class list(object)
+ |  list(iterable=(), /)
+ |
+ |  Built-in mutable sequence.
+ |
+ |  If no argument is given, the constructor creates a new empty list.
+ |  The argument must be an iterable if specified.
+ |
+ |  Methods defined here:
+ |
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |
+ |  __contains__(self, key, /)
+ |      Return key in self.
+ |
+ |  __delitem__(self, key, /)
+ |      Delete self[key].
+ |
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |
+ |  __ge__(self, value, /)
+ |      Return self>=value.
+ |
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |
+ |  __getitem__(...)
+ |      x.__getitem__(y) <==> x[y]
+ |
+ |  __gt__(self, value, /)
+ |      Return self>value.
+ |
+ |  __iadd__(self, value, /)
+ |      Implement self+=value.
+ |
+ |  __imul__(self, value, /)
+ |      Implement self*=value.
+ |
+ |  __init__(self, /, *args, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |
+ |  __le__(self, value, /)
+ |      Return self<=value.
+ |
+ |  __len__(self, /)
+ |      Return len(self).
+ |
+ |  __lt__(self, value, /)
+ |      Return self<value.
+ |
+ |  __mul__(self, value, /)
+ |      Return self*value.
+ |
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |
+ |  __reversed__(self, /)
+ |      Return a reverse iterator over the list.
+ |
+ |  __rmul__(self, value, /)
+ |      Return value*self.
+ |
+ |  __setitem__(self, key, value, /)
+ |      Set self[key] to value.
+ |
+ |  __sizeof__(self, /)
+ |      Return the size of the list in memory, in bytes.
+ |
+ |  append(self, object, /)
+ |      Append object to the end of the list.
+ |
+ |  clear(self, /)
+ |      Remove all items from list.
+ |
+ |  copy(self, /)
+ |      Return a shallow copy of the list.
+ |
+ |  count(self, value, /)
+ |      Return number of occurrences of value.
+ |
+ |  extend(self, iterable, /)
+ |      Extend list by appending elements from the iterable.
+ |
+ |  index(self, value, start=0, stop=9223372036854775807, /)
+ |      Return first index of value.
+ |
+ |      Raises ValueError if the value is not present.
+ |
+ |  insert(self, index, object, /)
+ |      Insert object before index.
+ |
+ |  pop(self, index=-1, /)
+ |      Remove and return item at index (default last).
+ |
+ |      Raises IndexError if list is empty or index is out of range.
+ |
+ |  remove(self, value, /)
+ |      Remove first occurrence of value.
+ |
+ |      Raises ValueError if the value is not present.
+ |
+ |  reverse(self, /)
+ |      Reverse *IN PLACE*.
+ |
+ |  sort(self, /, *, key=None, reverse=False)
+ |      Sort the list in ascending order and return None.
+ |
+ |      The sort is in-place (i.e. the list itself is modified) and stable (i.e. the
+ |      order of two equal elements is maintained).
+ |
+ |      If a key function is given, apply it once to each list item and sort them,
+ |      ascending or descending, according to their function values.
+ |
+ |      The reverse flag can be set to sort in descending order.
+ |
+ |  ----------------------------------------------------------------------
+ |  Class methods defined here:
+ |
+ |  __class_getitem__(...) from builtins.type
+ |      See PEP 585
+ |
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |
+ |  __hash__ = None
+
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> x = [1,2,3]
+>>> x = ["1","2","3"]
+>>> ",
+  File "<stdin>", line 1
+    ",
+    ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> ",".join(x)
+'1,2,3'
+>>> b = ",".join(x)
+>>> b
+'1,2,3'
+>>> b.split(",")
+['1', '2', '3']
+>>> x
+['1', '2', '3']
+>>> " ".join(x)
+'1 2 3'
+>>> b=" ".join(x)
+>>> b.split()
+['1', '2', '3']
+>>> b.split("#")
+['1 2 3']
+>>> b
+'1 2 3'
+>>> b.split("@")
+['1 2 3']
+>>> b
+'1 2 3'
+>>> b.split()
+['1', '2', '3']
+>>> b.strip("@")
+'1 2 3'
+>>> b
+'1 2 3'
+>>> b.strip()
+'1 2 3'
+>>> b.split()
+['1', '2', '3']
+>>> b.split(",")
+['1 2 3']
+>>> b
+'1 2 3'
+>>> b=",".join(x)
+>>> b
+'1,2,3'
+>>> b.split()
+['1,2,3']
+>>> b.split(",")
+['1', '2', '3']
+>>> b.split("@")
+['1,2,3']
+>>> b.split("1")
+['', ',2,3']
+>>> b.split("2")
+['1,', ',3']
+>>> a
+'+97-23973928'
+>>> b
+'1,2,3'
+>>> x
+['1', '2', '3']
+>>> profile
+'Ram-ram@gmail.com-ktm-9823390335-9742440384'
+>>> email
+'ram@gmail.com'
+>>> profile.partition("-")
+('Ram', '-', 'ram@gmail.com-ktm-9823390335-9742440384')
+>>> email.partition("@")
+('ram', '@', 'gmail.com')
+>>> color = "red"
+>>> red.partition("e")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'red' is not defined
+>>> color.partition("e")
+('r', 'e', 'd')
+>>> "ram",upper()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'upper' is not defined. Did you mean: 'super'?
+>>> "ram".upper()
+'RAM'
+>>> "RaM".lower()
+'ram'
+>>> # find spaces in string
+>>> a = "My name is Bijay"
+>>> a.find(" ")
+2
+>>> dir(a)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+>>> a.count(" ")
+3
+>>> b=a.count(" ")
+>>> # find total words in sting
+>>> total words = b + 1
+  File "<stdin>", line 1
+    total words = b + 1
+          ^^^^^
+SyntaxError: invalid syntax
+>>> b
+3
+>>> b+=1
+>>> b
+4
+>>> total = b+=1
+  File "<stdin>", line 1
+    total = b+=1
+             ^^
+SyntaxError: invalid syntax
+>>> total = (b+=1)
+  File "<stdin>", line 1
+    total = (b+=1)
+              ^^
+SyntaxError: invalid syntax
+>>> a
+'My name is Bijay'
+>>> c = "papaya"
+>>> c.find("a")
+1
+>>> c.count("a")
+3
+>>> a.index("a")
+4
+>>> c.index("a")
+1
+>>> c.find("a", 2)
+3
+>>> c.find("a", 3)
+3
+>>> c.find("a", 5)
+5
+>>> c.find("a", 4)
+5
+>>> c.find("a",0,1)
+-1
+>>> c.find("a", 0, 2)
+1
+>>> c.find("a", 4, 6)
+5
+>>> # replace
+>>> a= "hahahahahahaha"
+>>> a.replace("h", "cb")
+'cbacbacbacbacbacbacba'
+>>> a.replace("ha", "cb", 3)
+'cbcbcbhahahaha'
+>>> a = "+98#976"
+>>> a.replace("#", "-")
+'+98-976'
+>>> story = " there was a small town."
+>>> story.replace("small", "huge", 4)
+' there was a huge town.'
+>>> story.replace("small", "huge")
+' there was a huge town.'
+>>> len(story)
+24
+>>> a = "Hello World"
+>>> a.swapcase()
+'hELLO wORLD'
+>>> a[0]
+'H'
+>>> a[0:5:2]
+'Hlo'
+>>>

@@ -1,0 +1,523 @@
+ a = []
+>>> type(a)
+<class 'list'>
+>>> len(a)
+0
+>>> a.append(1)
+>>> a
+[1]
+>>> a.append(1,2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list.append() takes exactly one argument (2 given)
+>>> dir(a)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> type(a)
+<class 'list'>
+>>> dir(list)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> help(list.append)
+Help on method_descriptor:
+
+append(self, object, /)
+    Append object to the end of the list.
+
+>>> a.append("hi")
+>>> a
+[1, 'hi']
+>>> a.remove("hi")
+>>> a
+[1]
+>>> students = ["ram","shyam", "hari"]
+>>> students.append("sita")
+>>> students
+['ram', 'shyam', 'hari', 'sita']
+>>> help(students.clear)
+Help on built-in function clear:
+
+clear() method of builtins.list instance
+    Remove all items from list.
+
+>>> students.clear()
+>>> students
+[]
+>>> help(students.copy)
+Help on built-in function copy:
+
+copy() method of builtins.list instance
+    Return a shallow copy of the list.
+
+>>> students.copy()
+[]
+>>> students
+[]
+>>> a=[1,2,3]
+>>> b=["a","b"]
+>>> a.extend(b)
+>>> a
+[1, 2, 3, 'a', 'b']
+>>> students
+[]
+>>> students = ['ram','shyam',
+... students = ['ram','shyam','hari']
+  File "<stdin>", line 2
+    students = ['ram','shyam','hari']
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+>>> students = ['ram', 'shyam', 'hari']
+>>> n = students
+>>> n
+['ram', 'shyam', 'hari']
+>>> n.clear()
+>>> n
+[]
+>>> students
+[]
+>>> id(n)
+2187542369728
+>>> id(students)
+2187542369728
+>>> a =[1,2,3]
+>>> b=a
+>>> id(b)
+2187538593728
+>>> id(a)
+2187538593728
+>>> a.append("hello")
+>>> a
+[1, 2, 3, 'hello']
+>>> b
+[1, 2, 3, 'hello']
+>>> c=a
+>>> c=a.copy()
+>>> c
+[1, 2, 3, 'hello']
+>>> a
+[1, 2, 3, 'hello']
+>>> id(c)
+2187538886592
+>>> id(a)
+2187538593728
+>>> c.append('python')
+>>> c
+[1, 2, 3, 'hello', 'python']
+>>> a
+[1, 2, 3, 'hello']
+>>> c.count()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list.count() takes exactly one argument (0 given)
+>>> c.count('hello')
+1
+>>> c.count(1)
+1
+>>> dir(list)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> students
+[]
+>>> students=['ram','hari','shyam']
+>>> students2=['sita','gita','rita']
+>>> students.extend(students2)
+>>> studetns
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'studetns' is not defined. Did you mean: 'students'?
+>>> students
+['ram', 'hari', 'shyam', 'sita', 'gita', 'rita']
+>>> students.extend(['hi','hello'])
+>>> students
+['ram', 'hari', 'shyam', 'sita', 'gita', 'rita', 'hi', 'hello']
+>>> a = [1,2,3]
+>>> b=[4,5,6]
+>>> a.append(b)
+>>> a
+[1, 2, 3, [4, 5, 6]]
+>>> x=[4,5,6]
+>>> x = [1,2,3]
+>>> y=[4,5,6]
+>>> x.extend(y)
+>>> x
+[1, 2, 3, 4, 5, 6]
+>>> dir(list)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> students
+['ram', 'hari', 'shyam', 'sita', 'gita', 'rita', 'hi', 'hello']
+>>> students.index('hari'0
+  File "<stdin>", line 1
+    students.index('hari'0
+                   ^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> students.index('hari')
+1
+>>> students.index('hey')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: 'hey' is not in list
+>>> students.insert('bijay',1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object cannot be interpreted as an integer
+>>> help(students.insert)
+Help on built-in function insert:
+
+insert(index, object, /) method of builtins.list instance
+    Insert object before index.
+
+>>> students
+['ram', 'hari', 'shyam', 'sita', 'gita', 'rita', 'hi', 'hello']
+>>> students.insert(2,'bijay')
+>>> students
+['ram', 'hari', 'bijay', 'shyam', 'sita', 'gita', 'rita', 'hi', 'hello']>>> students.insert(1,x)
+>>> students
+['ram', [1, 2, 3, 4, 5, 6], 'hari', 'bijay', 'shyam', 'sita', 'gita', 'rita', 'hi', 'hello']
+>>> students.pop()
+'hello'
+>>> students
+['ram', [1, 2, 3, 4, 5, 6], 'hari', 'bijay', 'shyam', 'sita', 'gita', 'rita', 'hi']
+>>> students.pop(1)
+[1, 2, 3, 4, 5, 6]
+>>> students
+['ram', 'hari', 'bijay', 'shyam', 'sita', 'gita', 'rita', 'hi']
+>>> students.remove('bijay')
+>>> students
+['ram', 'hari', 'shyam', 'sita', 'gita', 'rita', 'hi']
+>>> std=students.pop(2)
+>>> std
+'shyam'
+>>> students
+['ram', 'hari', 'sita', 'gita', 'rita', 'hi']
+>>> students.reverse()
+>>> students
+['hi', 'rita', 'gita', 'sita', 'hari', 'ram']
+>>> students[::-1]
+['ram', 'hari', 'sita', 'gita', 'rita', 'hi']
+>>> students.sort()
+>>> students
+['gita', 'hari', 'hi', 'ram', 'rita', 'sita']
+>>> students.sort(reverse=True)
+>>> students
+['sita', 'rita', 'ram', 'hi', 'hari', 'gita']
+>>> students.sort(students[::-1])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: sort() takes no positional arguments
+>>> students
+['sita', 'rita', 'ram', 'hi', 'hari', 'gita']
+>>> a = ['a','A']
+>>> a.sort()
+>>> a
+['A', 'a']
+>>> a.append(1)
+>>> a
+['A', 'a', 1]
+>>> a.sort()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'int' and 'str'
+>>> dir(list)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> a
+['A', 'a', 1]
+>>> a=[1,4,2,6,2]
+>>> max(a)
+6
+>>> min(a)
+1
+>>> from functools import reduce
+>>> reduce(max, a)
+6
+>>> a = {}
+>>> type(a)
+<class 'dict'>
+>>> b = set(b)
+>>> b
+{4, 5, 6}
+>>> type(b)
+<class 'set'>
+>>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ a = []
+>>> type(a)
+<class 'list'>
+>>> len(a)
+0
+>>> a.append(1)
+>>> a
+[1]
+>>> a.append(1,2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list.append() takes exactly one argument (2 given)
+>>> dir(a)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> type(a)
+<class 'list'>
+>>> dir(list)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> help(list.append)
+Help on method_descriptor:
+
+append(self, object, /)
+    Append object to the end of the list.
+
+>>> a.append("hi")
+>>> a
+[1, 'hi']
+>>> a.remove("hi")
+>>> a
+[1]
+>>> students = ["ram","shyam", "hari"]
+>>> students.append("sita")
+>>> students
+['ram', 'shyam', 'hari', 'sita']
+>>> help(students.clear)
+Help on built-in function clear:
+
+clear() method of builtins.list instance
+    Remove all items from list.
+
+>>> students.clear()
+>>> students
+[]
+>>> help(students.copy)
+Help on built-in function copy:
+
+copy() method of builtins.list instance
+    Return a shallow copy of the list.
+
+>>> students.copy()
+[]
+>>> students
+[]
+>>> a=[1,2,3]
+>>> b=["a","b"]
+>>> a.extend(b)
+>>> a
+[1, 2, 3, 'a', 'b']
+>>> students
+[]
+>>> students = ['ram','shyam',
+... students = ['ram','shyam','hari']
+  File "<stdin>", line 2
+    students = ['ram','shyam','hari']
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+>>> students = ['ram', 'shyam', 'hari']
+>>> n = students
+>>> n
+['ram', 'shyam', 'hari']
+>>> n.clear()
+>>> n
+[]
+>>> students
+[]
+>>> id(n)
+2187542369728
+>>> id(students)
+2187542369728
+>>> a =[1,2,3]
+>>> b=a
+>>> id(b)
+2187538593728
+>>> id(a)
+2187538593728
+>>> a.append("hello")
+>>> a
+[1, 2, 3, 'hello']
+>>> b
+[1, 2, 3, 'hello']
+>>> c=a
+>>> c=a.copy()
+>>> c
+[1, 2, 3, 'hello']
+>>> a
+[1, 2, 3, 'hello']
+>>> id(c)
+2187538886592
+>>> id(a)
+2187538593728
+>>> c.append('python')
+>>> c
+[1, 2, 3, 'hello', 'python']
+>>> a
+[1, 2, 3, 'hello']
+>>> c.count()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list.count() takes exactly one argument (0 given)
+>>> c.count('hello')
+1
+>>> c.count(1)
+1
+>>> dir(list)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> students
+[]
+>>> students=['ram','hari','shyam']
+>>> students2=['sita','gita','rita']
+>>> students.extend(students2)
+>>> studetns
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'studetns' is not defined. Did you mean: 'students'?
+>>> students
+['ram', 'hari', 'shyam', 'sita', 'gita', 'rita']
+>>> students.extend(['hi','hello'])
+>>> students
+['ram', 'hari', 'shyam', 'sita', 'gita', 'rita', 'hi', 'hello']
+>>> a = [1,2,3]
+>>> b=[4,5,6]
+>>> a.append(b)
+>>> a
+[1, 2, 3, [4, 5, 6]]
+>>> x=[4,5,6]
+>>> x = [1,2,3]
+>>> y=[4,5,6]
+>>> x.extend(y)
+>>> x
+[1, 2, 3, 4, 5, 6]
+>>> dir(list)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> students
+['ram', 'hari', 'shyam', 'sita', 'gita', 'rita', 'hi', 'hello']
+>>> students.index('hari'0
+  File "<stdin>", line 1
+    students.index('hari'0
+                   ^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> students.index('hari')
+1
+>>> students.index('hey')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: 'hey' is not in list
+>>> students.insert('bijay',1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object cannot be interpreted as an integer
+>>> help(students.insert)
+Help on built-in function insert:
+
+insert(index, object, /) method of builtins.list instance
+    Insert object before index.
+
+>>> students
+['ram', 'hari', 'shyam', 'sita', 'gita', 'rita', 'hi', 'hello']
+>>> students.insert(2,'bijay')
+>>> students
+['ram', 'hari', 'bijay', 'shyam', 'sita', 'gita', 'rita', 'hi', 'hello']>>> students.insert(1,x)
+>>> students
+['ram', [1, 2, 3, 4, 5, 6], 'hari', 'bijay', 'shyam', 'sita', 'gita', 'rita', 'hi', 'hello']
+>>> students.pop()
+'hello'
+>>> students
+['ram', [1, 2, 3, 4, 5, 6], 'hari', 'bijay', 'shyam', 'sita', 'gita', 'rita', 'hi']
+>>> students.pop(1)
+[1, 2, 3, 4, 5, 6]
+>>> students
+['ram', 'hari', 'bijay', 'shyam', 'sita', 'gita', 'rita', 'hi']
+>>> students.remove('bijay')
+>>> students
+['ram', 'hari', 'shyam', 'sita', 'gita', 'rita', 'hi']
+>>> std=students.pop(2)
+>>> std
+'shyam'
+>>> students
+['ram', 'hari', 'sita', 'gita', 'rita', 'hi']
+>>> students.reverse()
+>>> students
+['hi', 'rita', 'gita', 'sita', 'hari', 'ram']
+>>> students[::-1]
+['ram', 'hari', 'sita', 'gita', 'rita', 'hi']
+>>> students.sort()
+>>> students
+['gita', 'hari', 'hi', 'ram', 'rita', 'sita']
+>>> students.sort(reverse=True)
+>>> students
+['sita', 'rita', 'ram', 'hi', 'hari', 'gita']
+>>> students.sort(students[::-1])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: sort() takes no positional arguments
+>>> students
+['sita', 'rita', 'ram', 'hi', 'hari', 'gita']
+>>> a = ['a','A']
+>>> a.sort()
+>>> a
+['A', 'a']
+>>> a.append(1)
+>>> a
+['A', 'a', 1]
+>>> a.sort()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'int' and 'str'
+>>> dir(list)
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> a
+['A', 'a', 1]
+>>> a=[1,4,2,6,2]
+>>> max(a)
+6
+>>> min(a)
+1
+>>> from functools import reduce
+>>> reduce(max, a)
+6
+>>> a = {}
+>>> type(a)
+<class 'dict'>
+>>> b = set(b)
+>>> b
+{4, 5, 6}
+>>> type(b)
+<class 'set'>
+>>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
